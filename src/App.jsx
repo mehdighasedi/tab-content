@@ -19,12 +19,19 @@ const tabData = [
 ];
 
 function App() {
-  const activeTab = 2;
+  const [activeTab, setActiveTab] = useState(1);
+  const activeHandler = (id) => {
+    setActiveTab(id);
+  };
   return (
     <div className="tab">
       <div className="tab__header">
         {tabData.map((tab) => (
-          <button key={tab} className={activeTab === tab.id ? "active" : ""}>
+          <button
+            onClick={() => activeHandler(tab.id)}
+            key={tab}
+            className={activeTab === tab.id ? "active" : ""}
+          >
             <span>{tab.title}</span>
             <span className="tab-indicator"></span>
           </button>
