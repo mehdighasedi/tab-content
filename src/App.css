@@ -50,3 +50,10 @@
   color: var(--slate-700);
   font-size: 1.5rem;
 }
+.btnShow {
+  padding: 1rem;
+  background:var(--blue-700);
+  color: #fff;
+  border-radius: 1rem;
+  margin-bottom: 45px;
+}
